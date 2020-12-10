@@ -1,0 +1,42 @@
+Samain sama databasenya
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=predict-app
+DB_USERNAME=root
+DB_PASSWORD=
+
+================================
+
+Cara Migrate Database :
+
+1.Masuk Folder File
+2.Buka terminal
+3.Ketik "php artisan migrate"
+4.Cek database
+
+================================
+Buat 1 akun Admin terlebih dahulu :
+1.Buka terminal
+2.Ketik lalu enter
+	- php artisan tinker 
+	- $user = new \App\Models\User;
+	- $user->role = "admin"
+	- $user->name = "admin"
+	- $user->email = 'admin@predict.com'
+	- $user->password = bcrypt('password')
+	- $user->remember_token = Str::random(60)
+	- $user->save()
+3.Cek Database Users
+4.Ctrl + C
+
+Note : Ketik Manual supaya gak error
+
+=================================
+Menjalankan Aplikasi :
+1.Masuk ke teriminal
+2.Ketik "php artisan serve"
+3.Ke halaman "http://127.0.0.1:8000/login"
+=================================
+Login
