@@ -7,6 +7,7 @@
 					<li><a href="/karyawan" class=""><i class="lnr lnr-user"></i> <span>Karyawan</span></a></li>
 				@endif
 				<li><a href="/data" class=""><i class="lnr lnr-chart-bars"></i> <span>Data</span></a></li>
+				<li><a href="/karyawan/{{auth()->user()->id-1}}/profile" class=""><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
 			</ul>
 		</nav>
 	</div>

@@ -49,6 +49,15 @@
 										<span>Remember me</span>
 									</label>
 								</div>
+								@if (session()->has('message'))
+									<div class="alert alert-dismissable alert-danger" role="alert">
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+											<span aria-hidden="true">×</span>
+										</button>
+										<i class="fa fa-times-circle"></i> 
+										{{ session('message') }}
+									</div>
+								@endif
 								<button type="submit" class="btn btn-primary btn-lg btn-block">LOGIN</button>
 								<div class="bottom">
 									<span class="helper-text"><i class="fa fa-lock"></i> <a href="#">Forgot password?</a></span>
